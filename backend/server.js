@@ -6,7 +6,7 @@ console.log("Stripe Key:", process.env.STRIPE_SECRET_KEY);
 
 import express from "express";
 import cors from "cors";
-import foodRouter from "./routes/foodroute.js";
+import foodRouter from "./routes/foodRoute.js";
 import { connectDB } from "./config/db.js";
 import userRouter from "./routes/userRoute.js";
 
