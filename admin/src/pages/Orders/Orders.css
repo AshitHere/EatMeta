@@ -1,0 +1,144 @@
+/* Page container */
+.order.add {
+  flex: 1;
+  padding: 30px 50px;
+  background-color: #f6f6f6;
+  min-height: 100vh;
+}
+
+/* Title */
+.order.add h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 25px;
+}
+
+/* Orders list */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Order card */
+.order-item {
+  display: grid;
+  grid-template-columns: 50px 1.8fr 100px 80px 180px;
+  align-items: center;
+  gap: 18px;
+
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+
+  padding: 16px 18px;
+  transition: all 0.2s ease;
+}
+
+/* Subtle hover like admin panels */
+.order-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Icon */
+.order-item img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* Food items */
+.order-item-food {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+/* Name */
+.order-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+/* Address block */
+.order-item-address {
+  margin-bottom: 4px;
+}
+
+.order-item-address p {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Phone */
+.order-item-phone {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Right side text (Items + Price) */
+.order-item > p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Items count alignment */
+.order-item > p:nth-of-type(1) {
+  justify-self: start;
+}
+
+/* Price */
+.order-item > p:nth-of-type(2) {
+  font-weight: 600;
+  color: #222;
+}
+
+/* Dropdown */
+.order-item select {
+  width: 160px;
+  padding: 6px 10px;
+
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+
+  background-color: #f9f9f9;
+  font-size: 13px;
+  color: #333;
+
+  outline: none;
+  cursor: pointer;
+}
+
+/* Dropdown focus */
+.order-item select:focus {
+  border-color: #ff6b00;
+  background-color: #fff;
+}
+
+/* Slight UI polish */
+.order-item select option {
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .order-item {
+    grid-template-columns: 50px 1fr;
+    align-items: flex-start;
+  }
+
+  .order-item > p,
+  .order-item select {
+    grid-column: span 2;
+  }
+
+  .order-item select {
+    width: 100%;
+  }
+}
